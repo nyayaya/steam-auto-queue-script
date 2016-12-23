@@ -9,9 +9,7 @@
 // @run-at       document-end
 // ==/UserScript==
 
-var curUrl = window.location.pathname;
-
-if(curUrl.indexOf("explore") != -1){
+if(window.location.pathname.indexOf("explore") != -1){
     var temp = document.getElementsByClassName("discovery_queue_winter_sale_cards_header")[0].getElementsByClassName("subtext")[0].innerHTML;
     if(temp.indexOf("Come back") == -1){
         document.getElementById("refresh_queue_btn").click();
